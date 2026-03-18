@@ -46,6 +46,33 @@ O projeto é dividido em dois ecossistemas independentes que coexistem na mesma 
 
 ---
 
+## 🛠️ Tecnologias Utilizadas
+
+O projeto foi construído utilizando o que há de mais moderno no ecossistema JavaScript, integrando APIs de emulação e estados globais complexos.
+
+### Core Frontend
+- **React.js (v18):** Biblioteca principal para construção da interface baseada em componentes.
+- **Vite:** Build tool ultra-rápida para o desenvolvimento e bundle do projeto.
+- **React Router Dom:** Gerenciamento de rotas para separar o E-commerce do Universo Retrô.
+- **Context API:** Gerenciamento de estado global para sistemas de conquistas e XP.
+
+### Estilização e UI
+- **CSS3 Moderno:** Uso de Flexbox, Grid e Variáveis CSS para temas dinâmicos (Moderno vs CRT).
+- **React Icons:** Biblioteca de ícones vetoriais para interface.
+- **React Toastify:** Sistema de notificações personalizadas para alertas e conquistas desbloqueadas.
+
+### Universo Retrô & Emulação
+- **Nostalgist.js:** Wrapper de alta performance para o **RetroArch** (Libretro) via WebAssembly.
+- **Canvas API:** Renderização de animações 2D personalizadas para os duelos de consoles históricos.
+- **LocalStorage API:** Persistência de dados para o sistema de conquistas clássicas (Trophy Room).
+- **WebAudio API:** Tratamento de som para a imersão nos jogos emulados.
+
+### Ferramentas de Desenvolvimento
+- **Git & GitHub:** Versionamento de código.
+- **Node.js & NPM:** Gerenciamento de pacotes e execução do ambiente.
+- **DiceBear API:** Geração dinâmica de avatares pixel-art para o perfil do usuário.
+---
+
 ## 📂 Estrutura do Projeto
 
 A arquitetura foi pensada para separar a lógica moderna da retrô, mantendo o código organizado:
