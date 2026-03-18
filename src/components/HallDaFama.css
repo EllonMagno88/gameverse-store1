@@ -1,0 +1,89 @@
+.hall-fama-page {
+  background-color: #000;
+  min-height: 100vh;
+  color: #fff;
+  font-family: 'Press Start 2P', cursive;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.hall-container {
+  max-width: 800px;
+  width: 100%;
+  border: 6px double #ff0055;
+  padding: 40px;
+  background: rgba(10, 10, 10, 0.9);
+  box-shadow: 0 0 20px #ff0055, inset 0 0 20px #ff0055;
+}
+
+.hall-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.pixel-title {
+  font-size: 2.5rem;
+  color: #00ffff;
+  text-shadow: 4px 4px #ff0055;
+  margin: 20px 0;
+}
+
+.score-table {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr 1fr 1fr;
+  color: #ffff00;
+  font-size: 0.8rem;
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+}
+
+.score-row {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr 1fr 1fr;
+  padding: 15px 0;
+  font-size: 0.7rem;
+  border-bottom: 1px solid #222;
+  align-items: center;
+}
+
+.user-row {
+  background: rgba(0, 255, 255, 0.1);
+  color: #00ffff;
+  animation: blink 1s infinite;
+}
+
+.rank-1 { color: #ffd700; font-size: 0.9rem; } /* Ouro */
+.rank-2 { color: #c0c0c0; } /* Prata */
+.rank-3 { color: #cd7f32; } /* Bronze */
+
+.player-score {
+  text-align: right;
+  color: #00ff00;
+}
+
+.hall-footer {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.insert-coin {
+  color: #ff0055;
+  margin-top: 30px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes blink {
+  50% { border-color: #00ffff; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}

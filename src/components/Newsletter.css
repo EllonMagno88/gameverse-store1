@@ -1,0 +1,132 @@
+.newsletter-container {
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, transparent, rgba(124, 58, 237, 0.05));
+}
+
+.newsletter-glass-card {
+  background: rgba(30, 27, 75, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  border-radius: 24px;
+  padding: 40px;
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.newsletter-info {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  flex: 1;
+  min-width: 300px;
+}
+
+.icon-box {
+  background: rgba(124, 58, 237, 0.2);
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 2rem;
+  color: #a78bfa;
+  border: 1px solid rgba(167, 139, 250, 0.3);
+}
+
+.text-content h3 {
+  color: #fff;
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.text-content p {
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+.newsletter-input-group {
+  display: flex;
+  gap: 12px;
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.newsletter-input-group input {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 15px 20px;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.newsletter-input-group input:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 15px rgba(124, 58, 237, 0.3);
+}
+
+.subscribe-btn {
+  background: #7c3aed;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 0 25px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.subscribe-btn:hover {
+  background: #6d28d9;
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(124, 58, 237, 0.4);
+}
+
+/* Animação do ícone voador */
+.floating-icon {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-8px) rotate(5deg); }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .newsletter-glass-card {
+    text-align: center;
+    flex-direction: column;
+    padding: 30px;
+  }
+  .newsletter-info {
+    flex-direction: column;
+  }
+  .newsletter-input-group {
+    width: 100%;
+    flex-direction: column;
+  }
+  .subscribe-btn {
+    padding: 15px;
+    justify-content: center;
+  }
+}

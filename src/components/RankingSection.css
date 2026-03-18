@@ -1,0 +1,88 @@
+.rankings-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ranking-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-left: 4px solid #7c3aed;
+  padding-left: 15px;
+}
+
+.ranking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ranking-card {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.ranking-card:hover {
+  background: rgba(124, 58, 237, 0.15);
+  transform: translateX(8px);
+  border-color: #7c3aed;
+}
+
+.rank-badge {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 15px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  background: #333;
+  color: #fff;
+}
+
+.rank-name {
+  flex: 1;
+  color: #e5e7eb;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.rank-stat {
+  font-size: 0.85rem;
+  color: #a78bfa;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* DESTAQUES DO TOP 3 */
+.rank-1 .rank-badge { background: #ffd700; color: #000; box-shadow: 0 0 15px #ffd700; }
+.rank-2 .rank-badge { background: #c0c0c0; color: #000; }
+.rank-3 .rank-badge { background: #cd7f32; color: #000; }
+
+.rank-1 { background: rgba(255, 215, 0, 0.05); border-color: rgba(255, 215, 0, 0.2); }
+
+/* Animação do ícone */
+.icon-pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 1; }
+}

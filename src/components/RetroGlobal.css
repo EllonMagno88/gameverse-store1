@@ -1,0 +1,45 @@
+/* Isso vai forçar o fundo do navegador a ficar preto */
+body.retro-mode-active {
+    background-color: #000000 !important;
+    background-image: none !important;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Isso remove qualquer estilo de fundo da sua div app-container original */
+body.retro-mode-active .app-container,
+body.retro-mode-active .retro-mode-active {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Garante que todos os textos fiquem verdes e pixelados */
+body.retro-mode-active h1, 
+body.retro-mode-active h2, 
+body.retro-mode-active h3, 
+body.retro-mode-active p, 
+body.retro-mode-active li, 
+body.retro-mode-active a {
+    font-family: 'Press Start 2P', cursive !important;
+    color: #33ff33 !important;
+    text-shadow: 2px 2px #000 !important;
+    text-transform: uppercase !important;
+}
+
+/* Ajuste das listas que estavam com bullets modernos */
+body.retro-mode-active ul {
+    list-style: none !important;
+    padding: 0 !important;
+}
+
+.retro-mode-active,
+.retro-consoles-page {
+  width: 100% !important;
+  max-width: 100% !important; /* Remove qualquer limite de largura */
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: block; /* Garante que o fluxo de blocos ocupe a largura total */
+}

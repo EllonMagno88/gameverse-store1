@@ -1,0 +1,484 @@
+/* Animação de barra de carregamento retrô */
+.progress-bar-retro {
+  width: 100%;
+  height: 20px;
+  background: #000;
+  border: 2px solid #33ff33;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar-retro::after {
+  content: "";
+  position: absolute;
+  left: 0; top: 0;
+  height: 100%;
+  width: 40%;
+  background: #33ff33;
+  animation: loading 2s infinite linear;
+}
+
+@keyframes loading {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.retro-gif {
+  width: 100%;
+  max-width: 400px;
+  border: 4px solid #fff;
+  filter: grayscale(1) contrast(1.5);
+  box-shadow: 0 0 15px #33ff33;
+  margin: 20px 0;
+}
+
+.glitch-text {
+  position: relative;
+  animation: glitch-anim 1s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% { text-shadow: 2px 0 #ff00ff; transform: translate(1px, 0); }
+  50% { text-shadow: -2px 0 #00ffff; transform: translate(-1px, 0); }
+  100% { text-shadow: 2px 0 #ff00ff; transform: translate(1px, 0); }
+}
+
+.retro-layout p, 
+.retro-layout li, 
+.retro-layout h2 {
+    color: #33ff33 !important;
+    line-height: 1.6;
+    text-transform: uppercase;
+}
+
+/* Layout das notícias na Home */
+.retro-news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 50px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.news-item {
+  border: 1px solid #33ff33;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+}
+
+.news-item h4 {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+
+.news-item p {
+  font-size: 0.65rem;
+  line-height: 1.4;
+}
+
+.news-item:hover {
+  background: #33ff33;
+  color: #000 !important;
+}
+
+.news-item:hover p, .news-item:hover h4 {
+  color: #000 !important;
+}
+
+.highlight-news {
+  border: 2px dashed #33ff33;
+  animation: pulse-border 2s infinite;
+}
+
+@keyframes pulse-border {
+  50% { opacity: 0.5; }
+}
+
+.system-hub-alert {
+  width: 100%;
+  text-align: center;
+  border: 1px solid #33ff33;
+  padding: 10px;
+  margin-bottom: 30px;
+  font-size: 0.7rem;
+  background: rgba(51, 255, 51, 0.05);
+}
+
+/* Container de Boas-Vindas */
+.retro-welcome-box {
+  border: 4px double #33ff33;
+  padding: 30px;
+  margin-bottom: 50px;
+  background: rgba(51, 255, 51, 0.05);
+  box-shadow: inset 0 0 20px rgba(51, 255, 51, 0.1);
+}
+
+.welcome-desc {
+  font-size: 0.8rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.welcome-desc span {
+  background: #33ff33;
+  color: #000;
+  padding: 2px 5px;
+}
+
+/* Vitrine de Batalha (Geração) */
+.battle-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.console-focus-card {
+  flex: 1;
+  min-width: 280px;
+  border: 2px solid #33ff33;
+  padding: 20px;
+  position: relative;
+  background: #000;
+}
+
+.console-focus-card.primary { border-color: #33ff33; box-shadow: 0 0 15px rgba(51, 255, 51, 0.3); }
+.console-focus-card.rival { border-color: #ffaa00; } /* Cor diferente para o rival */
+
+.badge {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  background: #33ff33;
+  color: #000;
+  font-size: 0.6rem;
+  padding: 2px 8px;
+}
+
+.rival .badge { background: #ffaa00; }
+.rival h4, .rival p { color: #ffaa00 !important; }
+
+.vs-badge {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-style: italic;
+  color: #ff3333;
+  text-shadow: 0 0 10px #ff3333;
+}
+
+/* Divisores Pixelados */
+.pixel-divider-short {
+  height: 4px;
+  width: 50px;
+  background: #33ff33;
+  margin: 15px 0;
+}
+
+.section-title {
+  font-size: 1rem;
+  margin: 40px 0 20px 0;
+  border-left: 10px solid #33ff33;
+  padding-left: 15px;
+}
+
+.duel-canvas-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  top: 20px;
+  border: 4px solid #33ff33;
+  background: #000;
+  box-shadow: 0 0 20px rgba(51, 255, 51, 0.2);
+  overflow: hidden;
+}
+
+.retro-duel-canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* Efeito de embaçamento sutil para parecer CRT */
+  filter: blur(0.5px);
+}
+
+.canvas-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: repeating-linear-gradient(
+    rgba(0, 0, 0, 0.15) 0px,
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+}
+
+/* Geração 2: Intellivision */
+.rival-intellivision {
+  border-color: #d4af37 !important; /* Dourado/Bronze antigo */
+}
+.rival-intellivision h4, .rival-intellivision p {
+  color: #d4af37 !important;
+}
+
+/* Geração 3: Nintendo vs Sega */
+.nintendo-red {
+  border-color: #ff0000 !important;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+}
+.nintendo-red h4, .nintendo-red p {
+  color: #ff0000 !important;
+}
+
+.sega-blue {
+  border-color: #0000ff !important;
+  box-shadow: 0 0 15px rgba(0, 0, 255, 0.3);
+}
+.sega-blue h4, .sega-blue p {
+  color: #0000ff !important;
+}
+
+/* Botão de Exploração */
+.explore-more-container {
+  display: flex;
+  justify-content: center;
+  margin: 60px 0;
+}
+
+.retro-btn-massive {
+  background: transparent;
+  color: #33ff33;
+  border: 4px double #33ff33;
+  padding: 20px 40px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.retro-btn-massive:hover {
+  background: #33ff33;
+  color: #000;
+  box-shadow: 0 0 30px #33ff33;
+  transform: scale(1.05);
+}
+
+.sega-news {
+    border-color: #0000ff !important;
+}
+
+.sega-news .news-tag {
+    background: #0000ff !important;
+}
+
+.news-item.highlight {
+    border: 1px solid #ffaa00;
+    box-shadow: 0 0 10px rgba(255, 170, 0, 0.2);
+}
+
+.line-divider {
+    width: 100%;
+    height: 2px;
+    background: #33ff33;
+    margin: 60px 0;
+    opacity: 0.3;
+}
+
+.primary-atari { border-color: #8b4513 !important; } /* Cor de madeira do Atari */
+.rival-intel { border-color: #00aaff !important; }
+
+.nintendo-red { border-color: #e60012 !important; }
+.sega-blue { border-color: #005bb6 !important; }
+
+.news-label {
+    font-size: 0.9rem;
+    color: #03d103;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.primary-atari {
+  border-color: #8b4513 !important;
+  box-shadow: 0 0 15px rgba(139, 69, 19, 0.4);
+}
+
+.rival-intel {
+  border-color: #00aaff !important;
+  box-shadow: 0 0 15px rgba(0, 170, 255, 0.4);
+}
+
+.tank-style {
+  border-color: #555 !important; /* Borda cor de asfalto/batalha */
+}
+
+/* Correção da Era de Ouro */
+.gold-era {
+  position: relative;
+  background: linear-gradient(180deg, 
+    rgba(0,0,0,1) 0%, 
+    rgba(212, 175, 55, 0.15) 50%, 
+    rgba(0,0,0,1) 100%
+  ) !important;
+  border-top: 1px solid rgba(212, 175, 55, 0.3);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 80px 0 !important; /* Aumentado para o gradiente "respirar" */
+  margin: 40px 0;
+  z-index: 1;
+}
+
+.gold-text {
+  color: #d4af37 !important;
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.8), 2px 2px #000;
+  letter-spacing: 2px;
+}
+
+/* Deixando os cards da 4ª gen mais "Premium" */
+.snes-card, .mega-card {
+  background: rgba(0, 0, 0, 0.9) !important;
+  border-width: 3px !important;
+}
+
+.speed-style {
+  border: 2px solid #d4af37 !important;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+  margin-top: 30px;
+}
+
+/* --- 5ª GERAÇÃO: ESTÉTICA POLIGONAL --- */
+
+.poly-era {
+  background: radial-gradient(circle at center, rgba(0, 209, 255, 0.05) 0%, rgba(0, 0, 0, 1) 80%) !important;
+  border-top: 1px solid #333;
+  padding: 60px 0;
+  position: relative;
+}
+
+/* Título com efeito Glitch de BIOS */
+.poly-text {
+  color: #00d1ff !important;
+  text-shadow: 2px 2px #000, 0 0 10px rgba(0, 209, 255, 0.6);
+  font-family: 'Press Start 2P', cursive;
+  text-transform: uppercase;
+}
+
+/* Card PlayStation (Cinza Clássico) */
+.psx-card {
+  border-color: #aaa !important;
+  background: rgba(40, 40, 40, 0.9) !important;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.psx-card h4 {
+  color: #fff;
+}
+
+.badge.psx {
+  background: #00d1ff;
+  color: #000;
+  font-weight: bold;
+}
+
+/* Card Saturn (Escuro/Sério) */
+.saturn-card {
+  border-color: #444 !important;
+  background: rgba(20, 20, 20, 0.9) !important;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.saturn-card h4 {
+  color: #888;
+}
+
+.badge.saturn {
+  background: #3a3a3a;
+  color: #fff;
+  border: 1px solid #666;
+}
+
+/* Container do Duelo Poligonal */
+.poly-style {
+  background: #050505 !important;
+  border: 1px solid #00d1ff !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efeito de Scanlines específico para o duelo 3D */
+.poly-style::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+              linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  background-size: 100% 4px, 3px 100%;
+  pointer-events: none;
+}
+
+/* Ajuste das News Grid na 5ª Gen */
+.poly-era .news-item {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #00d1ff33;
+  transition: all 0.3s ease;
+}
+
+.poly-era .news-item:hover {
+  border-color: #00d1ff;
+  transform: translateX(5px);
+}
+
+/* Badge de VS para 5ª Gen */
+.poly-era .vs-badge {
+  background: #00d1ff;
+  color: #000;
+  box-shadow: 0 0 15px #00d1ff;
+  font-style: italic;
+}
+
+/* --- TEMAS DE GERAÇÃO (IDENTIDADE VISUAL) --- */
+/* Correção de visibilidade dos temas */
+.generation-section {
+    padding: 60px 20px;
+    margin-bottom: 20px;
+}
+
+/* 1ª Gen - Verde Fósforo */
+.gen-1-theme { 
+    background: #000 !important; 
+    border-bottom: 2px solid #33ff3333; 
+}
+
+/* 2ª Gen - Madeira/Atari */
+.gen-2-theme { 
+    background: #1a0f00 !important; 
+    border-top: 5px solid #5a2d0c !important; 
+    border-bottom: 5px solid #5a2d0c !important; 
+}
+.gen-2-theme .section-title { color: #ffaa00 !important; border-left-color: #ffaa00; }
+
+/* 3ª Gen - Azul Profundo/NES */
+.gen-3-theme { 
+    background: linear-gradient(180deg, #000 0%, #001533 100%) !important; 
+}
+.gen-3-theme .section-title { color: #00ffff !important; border-left-color: #00ffff; }
+
+/* 6ª Gen - Estilo PS2 */
+.fluid-era {
+    background: radial-gradient(circle at center, #000022 0%, #000 80%) !important;
+}
+.fluid-text { color: #fff !important; text-shadow: 0 0 15px #0044ff; }
+.fluid-style { border-color: #0044ff !important; box-shadow: 0 0 20px #0044ff44; }
+
+/* Estilo específico das News da 6ª Gen */
+.fluid-era .news-item {
+    border-color: #0044ff33;
+    background: rgba(0, 0, 50, 0.3);
+}
+.fluid-era .news-item:hover {
+    border-color: #0044ff;
+    background: #0044ff;
+}

@@ -1,0 +1,32 @@
+.system-glitch-note {
+  margin-top: 50px;
+  padding: 25px;
+  background: rgba(10, 10, 30, 0.6);
+  border-left: 4px solid #7c3aed;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  color: #a78bfa;
+  border-radius: 8px;
+  max-width: 800px;
+  align-self: center;
+}
+
+.glitch-code {
+  color: #ef4444; /* Vermelho vibrante para o erro */
+  font-weight: bold;
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 10px;
+  height: 18px;
+  background: #7c3aed;
+  margin-left: 8px;
+  vertical-align: middle;
+  animation: blink-cursor 1s step-end infinite;
+}
+
+@keyframes blink-cursor {
+  from, to { background: transparent; }
+  50% { background: #7c3aed; }
+}

@@ -1,0 +1,164 @@
+.retro-footer {
+  background-color: #000;
+  color: #33ff33;
+  padding: 40px 20px 20px 20px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.6rem;
+  border-top: 4px double #33ff33;
+  margin-top: 50px;
+}
+
+.retro-footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Divisores pixelados */
+.retro-footer-divider {
+  width: 100%;
+  height: 2px;
+  background: repeating-linear-gradient(
+    90deg,
+    #33ff33,
+    #33ff33 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  margin-bottom: 30px;
+}
+
+.footer-status-block p {
+  margin-bottom: 8px;
+}
+
+.blink-text {
+  animation: footer-blink 1s infinite;
+}
+
+@keyframes footer-blink {
+  50% { opacity: 0; }
+}
+
+.footer-info-block {
+  text-align: center;
+}
+
+.retro-copyright {
+  font-size: 0.75rem;
+  margin-bottom: 10px;
+}
+
+.retro-tagline {
+  color: #008800; /* Verde mais escuro para a frase */
+}
+
+.footer-links-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.retro-social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.retro-social-links a {
+  color: #33ff33;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.retro-social-links a:hover {
+  background: #33ff33;
+  color: #000;
+}
+
+/* Barra inferior final */
+.retro-footer-bottom-bar {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #004400;
+  padding-top: 10px;
+  color: #006600;
+}
+
+.retro-footer {
+  padding: 60px 20px;
+  text-align: center;
+  background: #000;
+}
+
+.system-status {
+  font-size: 0.7rem;
+  color: #33ff33;
+  margin-bottom: 20px;
+  opacity: 0.6;
+}
+
+.power-btn {
+  background: transparent;
+  color: #ff3333;
+  border: 2px solid #ff3333;
+  padding: 10px 20px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 20px;
+}
+
+.power-btn:hover {
+  background: #ff3333;
+  color: #000;
+  box-shadow: 0 0 20px #ff3333;
+}
+
+.copyright {
+  font-size: 0.6rem;
+  color: #555;
+}
+
+/* EFEITO CRT POWER OFF */
+.crt-power-off {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #ffffff;
+  z-index: 99999; /* Garante que fique acima do crt-overlay e do main */
+  pointer-events: none;
+  opacity: 0;
+  /* Estado inicial: tela cheia mas invisível */
+  transform: scale(1); 
+}
+
+.crt-power-off.active {
+  animation: crt-shutdown 0.6s ease-out forwards;
+}
+
+@keyframes crt-shutdown {
+  0% {
+    opacity: 0;
+    transform: scaleY(1) scaleX(1);
+  }
+  10% {
+    opacity: 1; /* O "flash" branco aparece */
+    transform: scaleY(1) scaleX(1);
+  }
+  60% {
+    opacity: 1;
+    transform: scaleY(0.005) scaleX(1.1); /* Achata verticalmente virando uma linha */
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(0.005) scaleX(0); /* Encolhe a linha até sumir no centro */
+  }
+}
