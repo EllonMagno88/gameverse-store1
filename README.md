@@ -71,24 +71,13 @@ A arquitetura foi pensada para separar a lógica moderna da retrô, mantendo o c
     ┗ 📂 roms      # Arquivos .lib / ROMs organizados por console (gba, snes, etc)
 ````
 🛠️ Como rodar o projeto localmente
-Clone o repositório
-
-Bash
-git clone [https://github.com/SEU-USUARIO/gameverse-store.git](https://github.com/SEU-USUARIO/gameverse-store.git)
-Acesse a pasta do projeto
-
-Bash
-cd gameverse-store
-Instale as dependências
-
-Bash
-npm install
-Inicie o servidor de desenvolvimento (Vite)
-
-Bash
-npm run dev
-Acesse no navegador
-Abra http://localhost:5173.
+```bash
+    git clone https://github.com/SEU-USUARIO/gameverse-store.git #Clone o Repositório
+    cd gameverse-store #Acesse a pasta do projeto
+    npm install #Instale as Dependências
+    npm run dev #Inicialize o servidor de desenvolvimento Vite
+    http://localhost:5173. #Acesse pelo navegador através desse link
+````
 
 💡 Dica: Tente usar o Konami Code no teclado para descobrir a magia!
 
