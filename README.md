@@ -72,7 +72,7 @@ A arquitetura foi pensada para separar a lógica moderna da retrô, mantendo o c
 ````
 🛠️ Como rodar o projeto localmente
 ```bash
-    git clone https://github.com/EllonMagno88/gameverse-store.git #Clone o Repositório
+    git clone https://github.com/EllonMagno88/gameverse-store1.git #Clone o Repositório
     cd gameverse-store #Acesse a pasta do projeto
     npm install #Instale as Dependências
     npm run dev #Inicialize o servidor de desenvolvimento Vite
