@@ -81,6 +81,10 @@ A arquitetura foi pensada para separar a lógica moderna da retrô, mantendo o c
 
 💡 Dica: Tente usar o Konami Code no teclado para descobrir a magia!
 
+## Links Alternativos
+
+Netlify: https://gameverse-store.netlify.app/
+
 ## 🧠 Aprendizados e Desafios
 Integração de Emulação Front-end: Lidar com a leitura de ROMs e arquivos de BIOS (.lib) usando JavaScript para rodar jogos de diferentes gerações no mesmo <EmulatorModal />.
 
