@@ -16,12 +16,12 @@ Bem-vindo ao **GameVerse Store**, um projeto front-end desenvolvido em React que
 ### O Mundo Moderno (GameVerse Store)
 > Uma interface limpa, focada na experiência do usuário para descoberta de jogos atuais e notícias do mundo gamer.
 
-![GameVerse Moderno](link-da-imagem-do-site-roxo-aqui)
+![GameVerse Moderno](./screenshots/gameverse-home.png)
 
 ### A Falha na Matrix (GameVerse Retrô)
 > Ativado via código secreto ou botão especial, o site se transforma em um terminal CRT verde e preto, com história dos consoles e jogos clássicos totalmente jogáveis.
 
-![GameVerse Retrô]((https://github.com/user-attachments/assets/193368cd-938a-4800-90df-417d327ad651))
+![GameVerse Retrô](./screenshots/gameretro-home.png)
 
 ---
 
