@@ -81,7 +81,7 @@ A arquitetura foi pensada para separar a lógica moderna da retrô, mantendo o c
 
 💡 Dica: Tente usar o Konami Code no teclado para descobrir a magia!
 
-##🧠 Aprendizados e Desafios
+## 🧠 Aprendizados e Desafios
 Integração de Emulação Front-end: Lidar com a leitura de ROMs e arquivos de BIOS (.lib) usando JavaScript para rodar jogos de diferentes gerações no mesmo <EmulatorModal />.
 
 Separação de Estados (Context API vs LocalStorage): Resolver conflitos de ciclo de vida do React ao gerenciar dois sistemas de conquistas separados (Moderno e Retrô). A solução foi isolar os troféus modernos no Context API e fazer o Perfil Retrô ler o progresso diretamente do LocalStorage.
