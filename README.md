@@ -39,7 +39,7 @@ O projeto é dividido em dois ecossistemas independentes que coexistem na mesma 
 ### 🟢 GameVerse Retrô (O Submundo)
 - **Acesso Secreto:** Desbloqueado através de um Hook customizado (`useKonamiCode`).
 - **História Interativa:** Duelos de consoles clássicos (ex: Magnavox Odyssey vs Atari) renderizados com animações dinâmicas em `<canvas>`.
-- **Emulador Nativo:** Jogue clássicos de NES, SNES, Mega Drive, GBA, GBC, SMS e até PS1 diretamente em um modal interativo no navegador!
+- **Emulador Nativo:** Jogue clássicos de NES, SNES, Mega Drive, GBA, GBC, e SMS diretamente em um modal interativo no navegador!
 - **Trophy Room (Conquistas Retrô):** Um segundo sistema de achievements, totalmente isolado. Usa o `LocalStorage` para registrar jogos clássicos que você abriu/zerou, sem bagunçar as conquistas da loja moderna.
 - **Hall da Fama:** Um ranking nostálgico dos melhores jogadores.
 - **Estética CRT:** CSS robusto simulando monitores de tubo antigos, scanlines e fontes pixeladas.
